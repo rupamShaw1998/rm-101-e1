@@ -1,13 +1,12 @@
 import React from "react";
-import Task from "./components/Task/Task";
-import Tasks from "./components/Tasks/Tasks";
+import TaskApp from "./components/TaskApp";
+import data from "./data/tasks.json";
 
 function App() {
-  // console.log(data);
+ 
   return (
     <div>
-      <Task />
-      <Tasks />
+      <TaskApp data={data}/>
     </div>
   );
 }

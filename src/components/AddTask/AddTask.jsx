@@ -1,12 +1,22 @@
-import React from "react";
+import React,{ useState } from "react";
 import styles from "./addTask.module.css";
 
-const AddTask = () => {
-  // NOTE: do not delete `data-testid` key value pair
+const AddTask = ({add}) => {
+  const [text ,setText] = useState("")
+  const addTodo = (event) => {
+      setText(event.target.value)
+  }
+
+  const handleClick = () => {
+    add(text)
+    setText("")
+  }
+
   return (
+
     <div className={styles.todoForm}>
-      <input data-testid="add-task-input" type="text" />
-      <button data-testid="add-task-button"></button>
+      <input data-testid="add-task-input" type="text" value={text} onChange={addTodo}/>
+      <button data-testid="add-task-button" onClick={handleClick}>Add</button>
     </div>
   );
 };
