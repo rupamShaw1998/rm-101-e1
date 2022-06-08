@@ -1,8 +1,10 @@
 import React from "react";
 import styles from "./tasks.module.css";
+import data from "../../data/tasks.json";
 
 const Tasks = () => {
   // NOTE: do not delete `data-testid` key value pair
+  console.log(data);
   return (
     <>
       <ul data-testid="tasks" className={styles.tasks}>

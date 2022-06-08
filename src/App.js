@@ -1,6 +1,15 @@
 import React from "react";
+import Task from "./components/Task/Task";
+import Tasks from "./components/Tasks/Tasks";
+
 function App() {
-  return <div>{/* Code Here */}</div>;
+  // console.log(data);
+  return (
+    <div>
+      <Task />
+      <Tasks />
+    </div>
+  );
 }
 
 export default App;
